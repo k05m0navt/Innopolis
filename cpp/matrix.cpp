@@ -11,6 +11,16 @@ void putToMatrix(int * arr, int rows, int cols){
     }
 }
 
+void assignOne2Another(int *a, int *b, int rows, int cols){
+    int i;
+    int j;
+    for (i=0;i<rows;i++){
+        for(j=0;j<cols;j++){
+            *(a + i*cols +j) = *(b + i*cols +j);
+        }
+    }
+}
+
 void printMatrix(int * arr, int rows, int cols){
     int i;
     int j;
