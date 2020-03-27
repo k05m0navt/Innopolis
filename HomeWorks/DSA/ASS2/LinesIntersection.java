@@ -1,3 +1,4 @@
+/* Daniil Gubajdullin */
 import java.lang.Math;
 
 public class LinesIntersection
@@ -81,3 +82,13 @@ public class LinesIntersection
         return (answer);
     }
 }
+
+/* 
+ *  Documentation
+ *  
+ *  1. Importance of line intersection
+ *      It is important to have fast algorithm that detects intersection between lines because of we use it in GIS, construction of the Voronoi diagram (Fortune's algorithm), the Delaunay triangulation, boolean operations on polygons.
+ *  
+ *  2. Sweep Line Algorithm (SLA)
+ *      SLA - one of the key techniques in computational geometry. It uses sweep line or sweep surface. This line or surface(often vertical) moved across(swept) the plane.
+ *  */
