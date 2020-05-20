@@ -4,7 +4,6 @@ f = open("input.txt", "r")
 f2 = open("output.txt", "w+")
 exp = f.readline()
 
-beta_red = 0
 counter = 0
 def check_lambda(exp):
     if (len(exp) > 0):
@@ -14,8 +13,6 @@ def check_lambda(exp):
         elif (exp[0] == '\\'):
             if ('.' in exp):
                 dot_pos = find_dot_position(exp)
-                global beta_red
-                beta_red += 1
                 return check_term(exp[1:dot_pos]) and check_lambda(exp[dot_pos+1:])
             else:
                 return False
@@ -45,10 +42,10 @@ def find_dot_position(exp):
     return exp.find('.')
 
 if (check_lambda(exp) == True):
-    print("YES")
-    print(str(beta_red))
+    f2.write("YES\n")
+    f2.write(str(exp.count('(\\')))
 else:
-    print("NO")
+    f2.write("NO")
 
 f.close()
 f2.close()
